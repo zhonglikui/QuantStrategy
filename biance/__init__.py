@@ -10,6 +10,7 @@ from vnpy_binance import (
     BinanceUsdtGateway,
     BinanceInverseGateway
 )
+from vnpy_ctabacktester import CtaBacktesterApp
 
 
 def main():
@@ -21,6 +22,7 @@ def main():
     main_engine.add_gateway(BinanceSpotGateway)
     main_engine.add_gateway(BinanceUsdtGateway)
     main_engine.add_gateway(BinanceInverseGateway)
+    main_engine.add_app(CtaBacktesterApp)
 
     main_window = MainWindow(main_engine, event_engine)
     main_window.showMaximized()
